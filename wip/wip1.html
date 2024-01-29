@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Haarmes</title>
+    <style>
+      .site-header {
+        display: flex;
+        height: 45px;
+        background-color: rgb(2, 138, 250);
+        margin: 0;
+        box-shadow: 0px 0px 10px rgb(0, 0, 0);
+      }
+
+      body {
+        background-color: rgb(85, 85, 85);
+        color: white;
+        margin: 0;
+        height: 2000px;
+      }
+
+      .header-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        color: lightblue;
+        padding-left: 12px;
+        font-weight: bold;
+      }
+
+      .submit-div {
+        display: flex;
+        margin-top: 300px;
+        justify-content: center;
+        vertical-align: middle;
+      }
+
+      .choices {
+      }
+
+      .submit-button {
+        display: flex;
+      }
+
+      .submit-btn-div {
+        display: flex;
+        justify-content: center;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-header">
+      <div class="header-title">Haarmes.com</div>
+    </div>
+    <div>
+      <div class="submit-div">
+        <form action="submit_database">
+          <input class="choices" type="radio" name="submit_choice" />1
+          <input class="choices" type="radio" name="submit_choice" />2
+          <input class="choices" type="radio" name="submit_choice" />3
+          <input class="choices" type="radio" name="submit_choice" />4
+          <input class="choices" type="radio" name="submit_choice" />5
+        </div>
+          <div class="submit-btn-div">
+            <button class="submit-button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

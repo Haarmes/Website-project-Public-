@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Haarmes</title>
+    <style>
+      .site-header {
+        display: flex;
+
+        height: 45px;
+        background-color: rgb(51, 51, 51);
+        margin: 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+        transition: height 0.45s;
+      }
+
+      .site-header:hover {
+        height: 55px;
+      }
+
+      body {
+        background-color: rgb(85, 85, 85);
+        color: white;
+        margin: 0;
+        height: 2000px;
+      }
+
+      .header-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        color: lightblue;
+        padding-left: 12px;
+        font-weight: bold;
+        transition: font-size 0.45s;
+        text-decoration: none;
+      }
+
+      .header-title:hover {
+        font-size: 32px;
+      }
+
+      .main-page {
+        display: flex;
+        padding-top: 100px;
+      }
+
+      .list-and-info {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .page-book-box {
+        display: flex;
+
+        flex: 1;
+        padding-right: 30px;
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+        background-color: rgb(51, 51, 51);
+      }
+
+      .page-book-info {
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+        padding-right: 30px;
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+        background-color: rgb(51, 51, 51);
+      }
+
+      .book-name {
+        font-size: 2rem;
+        transition: 0.2s;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .book-name:hover {
+        font-size: 2.2rem !important;
+        color: lightblue !important;
+        cursor: pointer !important;
+      }
+
+      .book-main-title {
+        justify-content: space-around;
+        font-size: 3rem;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 0px;
+      }
+      .book-main-title-box {
+        position: relative;
+      }
+
+      .recommend-text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.7rem;
+        position: absolute;
+        right: -70px;
+        bottom: -22px;
+        color: gold;
+        margin: 0;
+      }
+
+      .book-series-title {
+        margin-top: 3%;
+        margin-bottom: 5%;
+        font-size: 2rem;
+      }
+
+      .book-info-header-box {
+        display: flex;
+        flex-direction: column;
+        font-size: 2.5rem;
+        align-items: center;
+        width: 100%;
+      }
+      .page-info-rest {
+        display: flex;
+      }
+
+      .info-about-book {
+        display: flex;
+        padding-left: 3%;
+        flex: 1;
+        font-size: 2rem;
+      }
+
+      .book-cover-box {
+        margin: 2%;
+      }
+      .book-cover-image {
+        width: 250px;
+
+        height: auto;
+      }
+      .page-buttons-div {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5%;
+      }
+      .page-btn {
+        padding: 10px 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 4px;
+        margin-top: 15px;
+        background-color: rgb(51, 51, 51);
+
+        color: lightblue;
+        transition: 0.15s;
+      }
+      .page-btn:hover {
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 1px 8px;
+      }
+
+      .header-nav {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        color: lightblue;
+        padding-left: 12px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="site-header">
+      <div class="header-title">
+        <a href="http://www.haarmes.com" class="header-title">Haarmes.com</a>
+      </div>
+      <div class="header-title">
+        <a href="http://www.haarmes.com/books" class="header-nav">Books</a>
+      </div>
+    </div>
+    <div>
+      <div class="main-page">
+        <div class="list-and-info"></div>
+        <div class="page-book-box">
+          <ul class="book-list" id="book-list-id">
+            <li
+              class="book-name"
+              id="bookName1"
+              onclick="bookClickFunction(id)"
+            >
+              Name of the wind
+            </li>
+            <li
+              class="book-name"
+              id="bookName2"
+              onclick="bookClickFunction(id)"
+            >
+              The Wise Man's Fear
+            </li>
+            <li
+              class="book-name"
+              id="bookName3"
+              onclick="bookClickFunction(id)"
+            >
+              Assassin's Apprentice
+            </li>
+            <li
+              class="book-name"
+              id="bookName4"
+              onclick="bookClickFunction(id)"
+            >
+              Royal Assassin
+            </li>
+            <li
+              class="book-name"
+              id="bookName5"
+              onclick="bookClickFunction(id)"
+            >
+              Assassin's Quest
+            </li>
+            <li
+              class="book-name"
+              id="bookName6"
+              onclick="bookClickFunction(id)"
+            >
+              Fool's Errand
+            </li>
+            <li
+              class="book-name"
+              id="bookName7"
+              onclick="bookClickFunction(id)"
+            >
+              The Golden Fool
+            </li>
+            <li
+              class="book-name"
+              id="bookName8"
+              onclick="bookClickFunction(id)"
+            >
+              Fool's Fate
+            </li>
+            <li
+              class="book-name"
+              id="bookName9"
+              onclick="bookClickFunction(id)"
+            >
+              Fool's Assassin
+            </li>
+            <li
+              class="book-name"
+              id="bookName10"
+              onclick="bookClickFunction(id)"
+            >
+              Fool's Quest
+            </li>
+            <li
+              class="book-name"
+              id="bookName11"
+              onclick="bookClickFunction(id)"
+            >
+              Assassin's Fate
+            </li>
+            <li
+              class="book-name"
+              id="bookName12"
+              onclick="bookClickFunction(id)"
+            >
+              The Blade Itself
+            </li>
+            <li
+              class="book-name"
+              id="bookName13"
+              onclick="bookClickFunction(id)"
+            >
+              Before They Are Hanged
+            </li>
+            <li
+              class="book-name"
+              id="bookName14"
+              onclick="bookClickFunction(id)"
+            >
+              Last Argument of Kings
+            </li>
+          </ul>
+        </div>
+        <div class="page-book-info">
+          <div class="book-info-header-box">
+            <div class="book-main-title-box">
+              <h2 class="book-main-title" id="book-name-id"></h2>
+
+              <p class="recommend-text"></p>
+            </div>
+            <h3
+              class="book-series-title"
+              onclick="switchBookPageFunction(getElementById(id).innerHTML)"
+              id="book-series-id"
+            ></h3>
+          </div>
+          <div class="page-info-rest">
+            <div class="info-about-book"><p></p></div>
+            <div class="book-cover-box">
+              <img class="book-cover-image" src="" alt="" id="book-image-id" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="page-buttons-div">
+          <button
+            class="page-btn"
+            id="page1"
+            onclick="switchBookPageFunction(id)"
+          >
+            1
+          </button>
+          <button
+            class="page-btn"
+            id="page2"
+            onclick="switchBookPageFunction(id)"
+          >
+            2
+          </button>
+          <button
+            class="page-btn"
+            id="page3"
+            onclick="switchBookPageFunction(id)"
+          >
+            3
+          </button>
+          <button
+            class="page-btn"
+            id="page4"
+            onclick="switchBookPageFunction(id)"
+          >
+            4
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/public/main.js"></script>
+  </body>
+</html>
